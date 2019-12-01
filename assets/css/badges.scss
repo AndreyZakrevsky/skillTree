@@ -1,0 +1,54 @@
+@import '~/assets/css/variables.scss';
+
+svg.badge-gray {
+  fill: $inactive-text;
+}
+
+svg.badge-stars {
+  .star1, .star2, .star3 {
+    opacity: 0;
+  }
+
+  &.level1 {
+    .star2 {
+      opacity: 1;
+    }
+  }
+
+  &.level2 {
+    .star1, .star3 {
+      opacity: 1;
+    }
+  }
+
+  &.level3 {
+    .star1, .star2, .star3 {
+      opacity: 1;
+    }
+  }
+}
+
+
+svg.badge-stars-frame {
+  .star1, .star2, .star3 {
+    fill: silver;
+  }
+
+  &.level1 {
+    .star1 {
+      fill: inherit;
+    }
+  }
+
+  &.level2 {
+    .star1, .star2 {
+      fill: inherit;
+    }
+  }
+
+  &.level3 {
+    .star1, .star2, .star3 {
+      fill: inherit;
+    }
+  }
+}

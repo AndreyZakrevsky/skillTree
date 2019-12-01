@@ -1,0 +1,30 @@
+$website-color: #F8F9FC;
+$input-color: #F0F2FA;
+$active-text: #13B389;
+$blue-color: #5095FB;
+$white: #FFFFFF;
+$body-text: #666D74;
+$title-text: #252F39;
+$inactive-text: #ABB5BF;
+$inactive-btn: #DFE2EA;
+
+
+$border-radius: 0.3125rem;
+
+@mixin mobile {
+  @media (max-width: 800px) {
+    @content;
+  }
+}
+
+@mixin desktop {
+  @media (min-width: 800px) {
+    @content;
+  }
+}
+
+@mixin ie {
+  @media all and (-ms-high-contrast: none), (-ms-high-contrast: active) {
+    @content;
+  }
+}

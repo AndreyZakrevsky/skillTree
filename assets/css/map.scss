@@ -1,0 +1,99 @@
+@import '~/assets/css/variables.scss';
+
+.el-center {
+  position: absolute;
+  transform: translate(-50%, -50%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.map-wrapper {
+  overflow: hidden;
+  width: 100vw;
+  height: 100vh;
+}
+
+.map-tree { /*TODO: component class */
+  height: 1000vh;
+  width: 1000vw;
+}
+
+.node-content {
+  cursor: pointer;
+
+  &:hover {
+    opacity: .8;
+  }
+
+  svg {
+    display: block;
+  }
+
+  img.employee-photo {
+    position: absolute;
+    max-width: 100px;
+    border-radius: 100px;
+    @include ie {
+      transform: translate(-120%, -50%);
+    }
+  }
+}
+
+
+svg {
+  &.badge-stars {
+    width: 40px;
+    @include ie {
+      height: 50px;
+    }
+  }
+
+  .halo {
+    fill: #f8f9fc;
+    stroke: rgb(255, 219, 172);
+    stroke-width: 6;
+    opacity: 0;
+    transition: .4s;
+  }
+}
+
+.node-selected svg,
+svg.line-selected {
+  .halo {
+    opacity: 1;
+    transition: .7s;
+  }
+}
+.node-content:not(.node-visible) {
+  opacity: .25;
+}
+
+
+.node-name {
+  position: absolute;
+  text-align: center;
+  &.depth1 {
+    transform: translate(0, 420%);
+    font-weight: bold;
+    @include ie {
+      transform: translate(0, 330%);
+      left: 0;
+      right: 0;
+    }
+  }
+  &.depth2 {
+    transform: translate(0, 150%);
+    @include ie {
+      transform: translate(0, 100%);
+      left: 0;
+    }
+  }
+  &.depth3, &.depth4 {
+    transform: translate(50px, -130%);
+    left: 0;
+  }
+  &.depth5 {
+    transform: translate(0, -34px);
+  }
+}

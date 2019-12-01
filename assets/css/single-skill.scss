@@ -1,0 +1,72 @@
+@import '~/assets/css/variables.scss';
+@import '~/assets/css/main.scss';
+
+.single-skill {
+  width: 300px;
+  color: $title-text;
+
+  .big-badge {
+    margin: 12px;
+    width: 64px;
+    max-width: 20%;
+    @include ie {
+      height: 90px;
+    }
+  }
+
+  h4 {
+    font-family: 'Avenir-Heavy';
+    font-size: 1.125rem;
+  }
+}
+
+.skill-top-part {
+  padding-top: 15px;
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  flex-wrap: nowrap;
+  position: relative;
+
+  margin-bottom: 7px;
+  padding-bottom: 4px;
+  border-bottom: 1px solid $inactive-text;
+
+  h3 {
+    width: 155px;
+    padding-top: 15px;
+    font-family: 'Avenir-Black';
+  }
+}
+
+.skill-active {
+  display: flex;
+  align-items: center;
+  margin: 10px 0;
+
+  svg {
+    width: 24px;
+    margin-right: 26px;
+  }
+
+  h5 {
+    font-size: 1rem;
+  }
+}
+
+.skill-text {
+  padding: 7px 0px;
+  line-height: 1.3;
+  color: $body-text;
+  font-size: 1rem;
+}
+
+.skill-status {
+  color: #d4182f;
+  font-size: 0.875rem;
+  font-family: 'Avenir-Medium';
+}
+
+.active {
+  color: #3fae49;
+}
